@@ -9,6 +9,8 @@ const Stack = createNativeStackNavigator();
 const MainNavigation = () => {
     const token = useSelector((state: any) => state?.auth?.user?.token);
 
+    console.log(token, "token----")
+
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             {(!token || token === "") ?
